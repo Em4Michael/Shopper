@@ -4,7 +4,7 @@ import { MenuItems } from './MenuItems';
 import './Navbar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { Button } from '../Button/Button';
+import Button from '../Button/Button';
 
 function Navbar() {
 
@@ -17,17 +17,17 @@ function Navbar() {
 
     <nav className="nav">
       <div className='contained'>
-        <div className="logo">
-          <Link to='/Home'> <h1> ShopKit </h1> </Link>
-        </div>
+        
+          <Link to='/Home'> <h1 className="logo"> Shopper </h1> </Link>
+        
         <div className='navItems'>
-          
+
           <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
             {MenuItems.map((item, index) => {
               return (
                 <li key={index}>
                   <Link to={`/${item.link}`} className={item.cName}>{item.name}</Link>
-                </li> 
+                </li>
               )
             }
             )}
@@ -35,10 +35,20 @@ function Navbar() {
 
 
           <Link to='/Cart'> <div className="shopIcon" ><FontAwesomeIcon icon={faShoppingCart} /></div> </Link>
-          <Link to='/SignUp'> <Button>Sign Up</Button> </Link>
+
+          <Link to='/SignUp'>
+            <Button onClick={() => { console.log('has been clicked') }}
+              type="button"
+              buttonStyle="btn-outline">
+              Sign Up
+            </Button> 
+          </Link>
+
+
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon icon={clicked ? faTimes : faBars} />
           </div>
+          
         </div>
       </div>
     </nav>
