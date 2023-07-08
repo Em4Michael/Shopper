@@ -1,0 +1,94 @@
+.head {
+  padding: 1rem;
+}
+
+.item {
+  border-radius: 0.5rem;
+  margin: 1rem;
+  background-color: #ffffff;
+  padding: 10px;
+  max-width: 200px;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.image img {
+  width: 175px;
+  padding-bottom: 1rem;
+}
+
+
+.row {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.pp {
+  transition: transform 0.5s;
+
+}
+
+.pp:hover {
+  transform: translateY(-5px);
+
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.extra span{
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+}
+.price{
+  color: rgb(255, 0, 0, 0.8);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.stock{
+  color: rgb(2, 139, 1);
+  font-size: 0.85rem;
+}
+.Ostock{
+  color: rgb(177, 1, 1);
+  text-decoration: line-through;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+.rate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: small;
+  
+}

@@ -5,6 +5,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube, faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
     <footer>
       <div className="">
@@ -84,7 +85,7 @@ const Footer = () => {
 
        
       </div>
-      <p class="copyright">&copy; Copyright 2022 - Em4Michael</p>
+      <p class="copyright">&copy; Copyright {currentYear} - Em4Michael</p>
     </footer>
   )
 }

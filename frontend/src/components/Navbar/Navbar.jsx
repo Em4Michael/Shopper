@@ -18,7 +18,7 @@ function Navbar() {
     <nav className="nav">
       <div className='contained'>
         
-          <Link to='/Home'> <h1 className="logo"> Shopper </h1> </Link>
+          <Link to='/'> <h1 className="logo"> Shopper </h1> </Link>
         
         <div className='navItems'>
 
