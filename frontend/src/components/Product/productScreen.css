@@ -3,12 +3,14 @@
 }
 
 .item {
+  display: flex;
+  flex-direction: column;
   border-radius: 0.5rem;
   margin: 1rem;
   background-color: #ffffff;
   padding: 10px;
   max-width: 200px;
-  height: 350px;
+  height: 335px;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -21,10 +23,13 @@
   width: 100%;
 
 }
-
+.content{
+  max-width: 180px;
+}
 .image img {
   width: 175px;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 
@@ -76,13 +81,15 @@
   text-decoration: line-through;
 }
 .header{
-  display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   font-size: 0.8rem;
   font-weight: bold;
   padding-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .rate{
   display: flex;

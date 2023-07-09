@@ -23,7 +23,8 @@ const Product = ({product}) => {
                     </Link>
                     <div className="rate">
                         <div className="stars">
-                            <Rating value={product.rating} />
+                            <Rating value={product.rating} text={`${product.numReviews} reviews`}
+                            />
                         </div>
                         <div className="rating">
                             {product.numReviews} reviews
