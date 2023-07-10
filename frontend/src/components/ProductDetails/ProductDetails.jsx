@@ -3,22 +3,22 @@ import { Link, useParams } from 'react-router-dom';
 import Rating from '../Rating/Rating';
 import './ProductDetails.css'
 import axios from 'axios';
-import products from '../../products'
+//import products from '../../products'
 
 const ProductDetails = () => {
   let { id } = useParams();
-  const product = products.find((p) => p._id === id)
+  //const product = products.find((p) => p._id === id)
 
-  // const [product, listProduct] = useState([])
-  //  useEffect (() => {
-  //     const fetchProduct = async () => {
-  //         const {data} = await axios.get(`/api/products/${id}`)
+   const [product, listProduct] = useState([])
+    useEffect (() => {
+     const fetchProduct = async () => {
+           const {data} = await axios.get(`/api/products/${id}`)
 
-  //        listProduct(data)
-  //    }
+          listProduct(data)
+      }
 
-  //    fetchProduct()
-  //  }, [])
+      fetchProduct()
+    }, [id])
 
 
   return (

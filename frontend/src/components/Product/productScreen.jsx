@@ -1,44 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import './productScreen.css'
 import Product from './Product';
-import products from '../../products'
+//import products from '../../products'
 import { useDispatch, useSelector } from 'react-redux';
 //import { listProducts } from '../../actions/productActions';
 import axios from 'axios';
 
 
-function productScreen() {
+function ProductScreen() {
 
-    // const API_URL = 'http://localhost:5000/api/products/' 
+  // const API_URL = 'http://localhost:5000/api/products/' 
 
-//   const [products, listProducts] = useState([])
-    //const dispatch = useDispatch();
-   // useEffect(() => {
-   //     const fetchProducts = async () => {
-     //       const {data} = await axios.get('/api/products/')
+  const [products, listProducts] = useState([]);
+  //const dispatch = useDispatch();
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { data } = await axios.get('/api/products/')
 
-      //     listProducts(data)
-     //   }
+      listProducts(data)
+    };
 
-    //    fetchProducts()
+    fetchProducts()
     // dispatch(listProducts())
-   // }, [])
+  }, [])
 
-   // const productList = useSelector(state => state.productList)
+  // const productList = useSelector(state => state.productList)
   //  const { loading, error } = productList
-    return (
-        <>
-         <h1 className='head'>Latest Products</h1>
+  return (
+    <>
+      <h1 className='head'>Latest Products</h1>
 
-            <div className="ui items row center">
-              {products.map((product) =>
-             <Product product={product} />
-              )}
-            </div>
+      <div className="ui items row center">
+        {products.map((product) =>
+          <Product product={product} />
+        )}
+      </div>
 
 
-        </>
-    )
+    </>
+  )
 }
 
-export default productScreen
+export default ProductScreen
