@@ -2,6 +2,11 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
 const reviewSchema = mongoose.Schema({
+    user:{
+        type: mongoose.Schema.Type.ObjectId,
+        required: true,
+        ref: 'User',
+    },
     name: {
         type: String,
         required: true
@@ -18,6 +23,11 @@ const reviewSchema = mongoose.Schema({
 {timestamps: true});
 
 const productSchema = mongoose.Schema({
+    user:{
+        type: mongoose.Schema.Type.ObjectId,
+        required: true,
+        ref: 'User',
+    },
     name: {
         type: String,
         reequired: true,
@@ -63,6 +73,6 @@ const productSchema = mongoose.Schema({
 },
 {timestamps: true});
 
-const Product = mongoose.model('products', productSchema);
+const Product = mongoose.model('Product', productSchema);
 
 export default Product;
