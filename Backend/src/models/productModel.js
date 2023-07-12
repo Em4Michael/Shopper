@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
-const reviewSchema = mongoose.Schema({
+const reviewSchema = new mongoose.Schema({
     user:{
-        type: mongoose.Schema.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User',
     },
@@ -24,7 +24,7 @@ const reviewSchema = mongoose.Schema({
 
 const productSchema = mongoose.Schema({
     user:{
-        type: mongoose.Schema.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User',
     },

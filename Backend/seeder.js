@@ -1,5 +1,5 @@
-import express from 'express';
-import dotenv from 'dotenv';
+import express from 'express'
+import dotenv from 'dotenv'
 import colors from 'colors'
 import users from './src/data/users.js'
 import products from './src/data/products.js'
@@ -24,7 +24,7 @@ const importData = async () => {
             return { ...product, user: adminUser }
             })
 
-            
+
             await Product.insertMany(sampleProducts)
 
         //const createdProducts = await Product.insertMany(sampleProducts)
