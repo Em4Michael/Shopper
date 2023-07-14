@@ -48,7 +48,7 @@ const Rating = ({ value, text}) => {
                           ? faStarHalfAlt
                           : farStar} />
           </span>
-          <span> {text && text } </span>
+         {/*  <span> {text && text } </span> */}
     </div>
   )
 }
