@@ -32,9 +32,9 @@ const ProductDetails = () => {
   return (
 
     <>
-     {variants.map((variant) =>(
+     {/* {variants.map((variant) =>(
       <Message variant={variant} />
-    ))}
+    ))} */}
     { isLoading ? (
       <Spinner />
     ) : error ? (
